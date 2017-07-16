@@ -6,6 +6,7 @@ public class TreeTest {
 		// TODO Auto-generated method stub
 
 		Tree tree = new Tree();
+		
 		tree.root = new Node(0);
 		tree.root.left = new Node(1);
 		tree.root.right = new Node(2);
@@ -27,6 +28,16 @@ public class TreeTest {
 		System.out.print("\n the levelorder traversal of a tree is :");
 		
 		BreathFirstSearch breathfirstsearch = new BreathFirstSearch();
+		
+		System.out.println("before inserting data into the tree");
+		
+		breathfirstsearch.levelOrder(tree.root);
+		
+		System.out.println("after inserting data into the tree");
+		
+		tree.insert(10);
+		
+		tree.insert(5);
 		
 		breathfirstsearch.levelOrder(tree.root);
 
